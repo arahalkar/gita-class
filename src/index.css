@@ -3,9 +3,11 @@
 @theme {
   --color-saffron: #FF9933;
   --color-gold: #D4AF37;
-  --color-white: #FFFFFF;
-  --color-bg: #FCF9F2;
-  --color-text: #333333;
+  --color-peach: #FCF9F2;
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
   --color-accent: #5D2E1F;
   --font-serif: "Georgia", serif;
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -18,50 +20,7 @@
   --bg: #FCF9F2;
   --text: #333333;
   --accent: #5D2E1F;
-  --border: rgba(212, 175, 55, 0.3);
-}
-
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: var(--font-sans);
-}
-
-.card {
-  background: var(--white);
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-}
-
-.card-title {
-  font-family: var(--font-serif);
-  color: var(--accent);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.4s ease-out forwards;
-}
-
-@theme {
-  --color-saffron: #FF9933;
-  --color-gold: #D4AF37;
-  --color-peach: #FCF9F2;
-  --color-accent: #5D2E1F;
-}
-
-:root {
-  --saffron: #FF9933;
-  --gold: #D4AF37;
-  --white: #FFFFFF;
-  --bg: #FCF9F2;
-  --text: #333333;
-  --accent: #5D2E1F;
+  --teal-600: #0d9488;
   --border: rgba(212, 175, 55, 0.3);
 }
 
@@ -79,35 +38,35 @@ body {
   }
 
   .habit-checkbox {
-    @apply w-5 h-5 border-2 border-saffron rounded flex items-center justify-center cursor-pointer transition-colors;
+    @apply w-6 h-6 border-2 border-teal-600 rounded flex items-center justify-center cursor-pointer transition-colors;
   }
 
   .habit-checkbox.checked {
-    @apply bg-saffron text-white;
+    @apply bg-teal-600 text-white;
   }
 
   .stat-box {
-    @apply bg-white rounded-lg p-4 border-t-4 border-saffron text-center shadow-sm;
+    @apply bg-white rounded-lg p-4 border-t-4 border-teal-600 text-center shadow-sm;
   }
 
   .btn-primary {
-    @apply bg-saffron text-white px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50;
+    @apply bg-teal-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-teal-700 transition-colors disabled:opacity-50;
   }
 
   .upload-area {
-    @apply border-2 border-dashed border-gold rounded-lg p-6 text-center bg-[#fffdf9] cursor-pointer hover:bg-[#fff9f0] transition-colors;
+    @apply border-2 border-dashed border-teal-600/30 rounded-lg p-6 text-center bg-teal-50/30 cursor-pointer hover:bg-teal-50/50 transition-colors;
   }
 }
 
-/* Custom Scrollbar for Saffron feel */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-peach;
+  @apply bg-teal-50;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-saffron/40 rounded-full hover:bg-saffron/60;
+  @apply bg-teal-600/30 rounded-full hover:bg-teal-600/50;
 }

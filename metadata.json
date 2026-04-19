@@ -1,6 +1,6 @@
 {
   "name": "Gita class",
-  "description": "",
-  "requestFramePermissions": [],
+  "description": "A portal for Gita class students to track points, view leaderboards, and record verse recitations.",
+  "requestFramePermissions": ["microphone"],
   "majorCapabilities": []
 }
