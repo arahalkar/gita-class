@@ -489,8 +489,8 @@ const Dashboard = ({ studentName }: { studentName: string }) => {
 
   const handleAdminAuth = (e: React.FormEvent) => {
     e.preventDefault();
-    // Default password as per instructions or placeholder
-    if (adminPass === 'Gita2024') {
+    // Default password changed to 'admin'
+    if (adminPass === 'admin') {
       setIsAdminAuth(true);
       setView('admin');
       setShowAdminModal(false);
@@ -576,13 +576,7 @@ const Dashboard = ({ studentName }: { studentName: string }) => {
           <AdminDashboard />
         ) : (
           <main className="flex-1 p-4 md:p-6 grid grid-cols-1 md:grid-cols-[300px_1fr] lg:grid-cols-[300px_1fr] gap-6 relative">
-             {/* Left Sidebar - Habits */}
-            <aside className="space-y-6 md:overflow-y-auto md:pr-2 custom-scrollbar z-10">
-              <HabitTracker />
-            </aside>
-
-            {/* Center Section */}
-            <section className="flex flex-col gap-6 md:overflow-y-auto md:pr-2 custom-scrollbar z-10">
+            <section className="flex flex-col gap-6 md:overflow-y-auto md:pr-2 custom-scrollbar z-10 order-1 md:order-2">
               <div className="gita-card p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between border-teal-100 bg-teal-50/10 gap-4">
                 <div className="flex items-center gap-3">
                   <div className="bg-teal-100 p-2 rounded-lg shrink-0">
@@ -604,6 +598,10 @@ const Dashboard = ({ studentName }: { studentName: string }) => {
 
               <HomeworkSubmission />
             </section>
+
+            <aside className="space-y-6 md:overflow-y-auto md:pr-2 custom-scrollbar z-10 order-2 md:order-1">
+              <HabitTracker />
+            </aside>
           </main>
         )}
       </div>
